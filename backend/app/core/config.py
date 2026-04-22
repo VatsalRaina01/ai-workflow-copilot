@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     
     # GitHub Models Configuration
-    GITHUB_TOKEN: str = os.getenv("GITHUB_TOKEN", "")
+    GITHUB_TOKEN: str = ""
     GITHUB_MODELS_ENDPOINT: str = "https://models.inference.ai.azure.com"
     
     # Model Configuration
@@ -35,7 +35,7 @@ class Settings(BaseSettings):
     LOG_LEVEL: str = "INFO"
     
     class Config:
-        env_file = ".env"
+        env_file = "../.env"
 
 
 @lru_cache()
